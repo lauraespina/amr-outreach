@@ -3,47 +3,80 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: #333;
-    background-color: #f4f4f4;
 }
 
 header {
     background-color: #333;
     color: #fff;
-    padding: 1rem;
-    text-align: center;
 }
 
-nav ul {
+.navbar {
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.nav-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-nav ul li {
-    display: inline;
-    margin-right: 10px;
+.nav-item {
+    position: relative;
 }
 
-nav ul li a {
+.nav-item a {
+    color: #fff;
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+}
+
+.nav-item a:hover {
+    background-color: #555;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #333;
+    min-width: 160px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid #444;
+}
+
+.dropdown-menu li a {
+    padding: 10px 15px;
+    display: block;
     color: #fff;
     text-decoration: none;
 }
 
-nav ul li a:hover {
-    text-decoration: underline;
+.dropdown-menu li a:hover {
+    background-color: #555;
 }
 
-main {
+.nav-item:hover .dropdown-menu {
+    display: block;
+}
+
+section {
     padding: 20px;
-    text-align: center;
+    margin: 10px;
 }
 
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+section:nth-child(even) {
+    background-color: #f4f4f4;
+}
+
+h1 {
+    margin-top: 0;
 }
